@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BMI.MVVM.View.BMIView"
+             Title="BMIView">
+
+
+    <ScrollView>
+        <ScrollView.Background>
+            <LinearGradientBrush EndPoint="0,1">
+                <GradientStop Offset="0.0" Color="#572375"/>
+                <GradientStop Offset="0.0" Color="#a594f9"/>
+            </LinearGradientBrush>
+        </ScrollView.Background>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
+
+            <!--#region Height -->
+
+
+
+            <!--#endregion-->
+            
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+
+  
+
+</ContentPage>
