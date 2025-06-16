@@ -18,17 +18,24 @@
             VerticalOptions="Center">
 
             <!--#region Height -->
-
+            <Frame>
+                <VerticalStackLayout>
+                    <Label FontSize="Large"
+                           HorizontalOptions="Center"
+                           Text="Height (cm)"
+                           TextColor="Grey"/>
+                </VerticalStackLayout>
+            </Frame>
 
 
             <!--#endregion-->
-            
-            
+
+
         </VerticalStackLayout>
     </ScrollView>
 
 
 
-  
+
 
 </ContentPage>
