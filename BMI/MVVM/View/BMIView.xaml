@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BMI.MVVM.View.BMIView"
+             xmlns:gauge="clr-namespace:Syncfusion.Maui.Gauges;assembly=Syncfusion.Maui.Gauges"
              Title="BMIView">
 
 
@@ -24,6 +25,29 @@
                            HorizontalOptions="Center"
                            Text="Height (cm)"
                            TextColor="Grey"/>
+                    <gauge:SfLinearGauge Margin="0,15,0,0"
+                                         Interval="50"
+                                         Maximum="250"
+                                         Minimum="25">
+                        <gauge:SfLinearGauge.MarkerPointers>
+                            <gauge:LinearContentPointer
+                                IsInteractive="True"
+                                x:Name="HeightPointer"
+                                Position="Cross"
+                                Value="50">
+                                <gauge:LinearContentPointer.Content>
+                                    <Grid HeightRequest="25" WidthRequest="50">
+                                        <RoundRectangle CornerRadius="5" Fill="#ff0074E3"/>
+                                        <Label 
+                                            HorizontalOptions="Center"
+                                            Text="{Binding Source={x:Reference HeightPointer}, Path=Value, StringFormat='{0:0}'}"
+                                            TextColor="White"
+                                            VerticalOptions="Center"/>
+                                    </Grid>
+                                </gauge:LinearContentPointer.Content>
+                            </gauge:LinearContentPointer>
+                        </gauge:SfLinearGauge.MarkerPointers>
+                    </gauge:SfLinearGauge>
                 </VerticalStackLayout>
             </Frame>
 
