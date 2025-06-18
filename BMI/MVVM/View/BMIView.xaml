@@ -91,10 +91,11 @@
 
             <Frame>
                 <VerticalStackLayout>
-                    <Label FontSize="Title"
-                           HorizontalOptions="Center"
-                           Text="Result: Normal" />
-                    <gauge:SfRadialGauge Margin="0,-55,0,-55">
+                    <Label 
+                        FontSize="Title"
+                        HorizontalOptions="Center"
+                        Text="{Binding BMI.ResultText}" />
+                    <gauge:SfRadialGauge Margin="0,0,0,20">
                         <gauge:SfRadialGauge.Axes>
                             <gauge:RadialAxis
                                 Maximum="50"
@@ -190,9 +191,5 @@
 
         </VerticalStackLayout>
     </ScrollView>
-
-
-
-
 
 </ContentPage>
