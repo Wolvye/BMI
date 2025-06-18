@@ -34,7 +34,7 @@
                                 IsInteractive="True"
                                 x:Name="HeightPointer"
                                 Position="Cross"
-                                Value="50">
+                                Value="{Binding BMI.Height}">
                                 <gauge:LinearContentPointer.Content>
                                     <Grid HeightRequest="25" WidthRequest="50">
                                         <RoundRectangle CornerRadius="5" Fill="#ff0074E3"/>
@@ -52,7 +52,7 @@
             </Frame>
             <!--#endregion-->
 
-            <!--#region Width -->
+            <!--#region Weight -->
             <Frame>
                 <VerticalStackLayout>
                     <Label  FontSize="Large"
@@ -68,7 +68,7 @@
                                                 IsInteractive="True"
                                                 x:Name="WeightPointer"
                                                 Position="Cross"
-                                                Value="50">
+                                                Value="{Binding BMI.Weight}">
                                 <gauge:LinearContentPointer.Content>
                                     <Grid HeightRequest="25" WidthRequest="50">
                                         <RoundRectangle CornerRadius="5" Fill="#ff0074E3"/>
@@ -177,7 +177,7 @@
                                             NeedleEndWidth="15"
                                             NeedleLength="0.6"
                                             NeedleStartWidth="2"
-                                            Value="25">
+                                            Value="{Binding BMI.Result}">
                                         </gauge:NeedlePointer>
                                 </gauge:RadialAxis.Pointers>
                             </gauge:RadialAxis>
